@@ -10,50 +10,78 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 
 <body>
-    <header id="main-header" class="bg-warning h100">
+    <header id="main-header" class="h100">
         <div class="container-fluid h-100">
             <div class="row align-items-center h-100">
-                <div class="col-auto bg-info">
-                    <div class="box">
-                        LOGO
-                    </div>
+                <div class="col-auto ">
+                    <img class="logo-mobile d-md-none" src="./img/mobile-logo.png">
+                    <img class="logo-desktop d-none d-md-block" src="./img/logo.svg">
+
                 </div>
-                <div class="col bg-secondary">
-                    <div class="box">
-                        BARRA GRANDE DI RICERCA
-                    </div>
+                <div class="col ">
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 bg-light-gray" type="search"
+                            placeholder="Prova a cercare : Lezioni di laravel">
+
+                    </form>
+
                 </div>
-                <div class="col-auto bg-warning">
-                    <div class="box">
-                        ICON
+                <div class="col-auto">
+                    <div class="aside-action d-flex gap-3">
+                        <span class="d-none d-md-flex"><a href="#">
+                                <i class="fa-solid fa-list-ul"></i>
+                            </a></span>
+                        <span class="d-none d-md-flex"><a href="#">
+                                <i class="fa-solid fa-circle-question"></i>
+                            </a></span>
+                        <span class="d-none d-md-flex"><a href="#">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a></span>
+
+                        <div class="dropdown">
+                            <a class=" " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell text-warning"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="bg-info d-flex">
+    <main class=" d-flex">
 
         <aside class="bg-dark position-relative text-white p-3 h-100">
-            <ul>
-                <li>
-                    <a href="#">link</a>
+            <ul class="text-white">
+                <li class="menu-item   d-flex justify-content-center justify-content-md-start">
+                    <a href="#"><i class="fa-solid fa-house"></i> <span>Home</span></a>
                 </li>
-                <li>
-                    <a href="#">link</a>
+                <li class="menu-item   d-flex justify-content-center justify-content-md-start">
+                    <a href="#"><i class="fa-solid fa-chart-simple"></i> <span>Stats</span></a>
                 </li>
-                <li>
-                    <a href="#">link</a>
+                <li class="menu-item   d-flex justify-content-center justify-content-md-start">
+                    <a href="#"><i class="fa-solid fa-signal"></i> <span>Signals</span></a>
                 </li>
+
             </ul>
 
             <ul class="position-absolute bottom-0 start-0">
-                <li>
-                    <a href="#">link</a>
+                <li class="menu-item  d-flex justify-content-center justify-content-md-start">
+                    <a href="#"><i class="fa-solid fa-gear"></i><span>Admin</span></a>
                 </li>
             </ul>
         </aside>
@@ -63,25 +91,48 @@
 
 
 
-        <div class="col bg-secondary">
+        <div class="col ">
             <section class="overfow-y-auto h-100 ">
-                <header class="bg-danger">
+                <header class="bg-blue">
                     <div class="container-fluid">
                         <div class="row ">
-                            <div class="col-12 col-sm-4 col-lg-2 order-sm-last">
-                                <div class="box">
-                                    right
-                                </div>
+                            <div class="col-12 col-sm-4 col-md-2 order-sm-3 py-3 text-white">
+                                <p>Nuovo Studente</p>
+                                <button class="btn btn-primary border" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                                        class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="col-12 col-sm-4 col-lg-6 ">
-                                <div class="box">
-                                    left
-                                </div>
+                            <div class="col-12 col-sm-4 col-lg-6  text-white">
+                                <p>
+                                    <span class="h3">Boolean</span>
+                                    <span class="badge rounded-pill bg-medium-blue">
+                                        Piano Blaze
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="badge rounded-pill bg-medium-blue">
+                                        3 app
+                                    </span>
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    <span class="badge rounded-pill bg-medium-blue d-md-none">
+                                        +
+                                    </span>
+                                    <span class="badge rounded-pill bg-medium-blue  d-none d-md-inline ">
+                                        Boolean mobile app
+                                    </span>
+                                    <span class="badge rounded-pill bg-medium-blue  d-none d-md-inline ">
+                                        Boolean web app
+                                    </span>
+                                    <span class="badge rounded-pill bg-medium-blue  d-none d-md-inline ">
+                                        Boolean blog app
+                                    </span>
+                                </p>
                             </div>
-                            <div class="col-12 col-sm-4 col-lg-4">
-                                <div class="box">
-                                    center
-                                </div>
+                            <div class="col-12 col-sm-4 col-lg-4 text-white">
+
+                                <p>Studenti online negli ultimi 30 minuti</p>
+                                <p class="h4">125</p>
+
                             </div>
                         </div>
                     </div>
@@ -89,17 +140,334 @@
 
 
 
-                <section class="bg-info">
+                <section class="bg-gray">
                     <div class="container-fluid ">
                         <div class="row ">
                             <div class="col-lg-8">
-                                <div class="box">
-                                    left
+                                <div class="card my-4">
+                                    <div class="card-header">
+                                        Prossime classi
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+
+
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col " class="col-sm2 col-md-7">Nome</th>
+                                                        <th scope="col " class="d-none d-sm-table-cell col-md-2">Data
+                                                            inizio</th>
+                                                        <th scope="col" class="d-none d-sm-table-cell ">ROI</th>
+                                                        <th scope="col" class=" ">Stato</th>
+                                                        <th scope="col" class=" ">Azioni</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 75</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">15 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge text-bg-success">Done</span></td>
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 76</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">16 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge text-bg-success">Done</span></td>
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 77</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">17 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge text-bg-warning">Process</span></td>
+
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 78</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">18 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge text-bg-success">Done</span></td>
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 79</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">19 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge bg-danger">failed</span></td>
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 80</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">20 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge text-bg-success">Done</span></td>
+
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 81</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">21 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge bg-danger">failed</span></td>
+
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img src="img/class-avatar.jpg" class="avatar-table"
+                                                                    alt="">
+                                                                <span class="class-name">Classe 82</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td class="d-none d-sm-table-cell">22 Feb 2022</td>
+                                                        <td class="d-none d-sm-table-cell">20%</td>
+                                                        <td><span class="badge text-bg-success">Done</span></td>
+
+                                                        <td>
+                                                            <div class="d-flex gap-1">
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-pencil"></i></button>
+                                                                <button type="button"
+                                                                    class="btn border border-1 rounded border-dark"><i
+                                                                        class="fa-solid fa-trash"></i></button>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="card my-4">
+                                    <div class="card-header">
+                                        F.A.Q.
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-medium" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                        aria-expanded="false" aria-controls="flush-collapseOne">
+                                                        Come creo un nuvo utente?
+                                                    </button>
+                                                </h2>
+                                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        Con il tasto + vicino a nuovo studente
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed fw-medium"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                                            aria-controls="flush-collapseTwo">
+                                                            Come posso accedere alle informazioni del mio account?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">
+                                                            Puoi accedere alle informazione tramite il campanellino
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed fw-medium"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                                            aria-controls="flush-collapseThree">
+                                                            Posso visualizzare la pagina da mobile?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">
+                                                            Si, la pagina è responsive
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-lg-4 ">
-                                <div class="box">
-                                    right
+                                <div class="card my-4">
+                                    <div class="card-header">Todo</div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <input type="checkbox">
+                                            Kick off nuove classi
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox">
+                                            Lezion su Bootstrap in classe #75
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox">
+                                            Controllare username Github studenti
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="card my-4">
+                                    <img src="./img/stats.jpeg" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Utenti attivi</h5>
+                                        <p class="card-text">Lista degli utenti attivi nell'ultimo mese</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Gennaio: 1200</li>
+                                        <li class="list-group-item">Febbraio: 800</li>
+                                        <li class="list-group-item">Marzo: 1500</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <a href="#" class="card-link a-basic">
+                                            Visualizza report approfondito
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -107,70 +475,97 @@
                     </div>
                 </section>
         </div>
-        <!-- </section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-8">
-                        <div class="box">
-                            <table class="table table-hover">
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-light">...</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-4">
-
-                    </div>
-                </div>
+        <div class="offcanvas offcanvas-right  offcanvas-end" tabindex="-1" id="offcanvasRight"
+            aria-labelledby="offcanvasrightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRight">Inserisci un nuovo studente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body">
+                <div class="">
+                    <form class="row">
 
-        </section> -->
+                        <div class="col12 col-sm-6">
+                            <p class="d-flex flex-column">
+                                Nome
+                                <input type="text">
+                            </p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <p class="d-flex flex-column">Cognome
+                                <input type="text">
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <p class="d-flex flex-column position-relative ">
+                                <button type="submit" class="position-absolute bottom-0 left-0 border-0 email-button"><i
+                                        class="fa-solid fa-at"></i></button>
+                                Email
+                                <input type="email">
+                            </p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <p class="d-flex flex-column">Password
+                                <input type="password">
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p class="d-flex flex-column">Indirizzo
+                                <input type="text">
+                            </p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <p class="d-flex flex-column">Città
+                                <input type="text">
+                            </p>
+
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <p class="d-flex flex-column">
+                                <label for="pet-select">Stato</label>
+                                <select name="state">
+                                    <option value="italy">Italia</option>
+                                    <option value="france">Francia</option>
+                                    <option value="germany">Germania</option>
+                                </select>
+
+                            </p>
+
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <p class="d-flex flex-column">CAP
+                                <input type="number">
+                            </p>
+
+                        </div>
+                        <div class="col-12">
+                            <p class="d-flex flex-column">Foto
+                                <input type="file">
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p class="d-flex gap-2">
+                                <input type="checkbox">Seleziona per proseguire
+                            </p>
+
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                <button class="btn btn-primary" type="submit">Salva</button>
+                            </span>
+                            <span>
+                                <button class="btn btn-warning" type="submit">Svuota</button>
+                            </span>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
     </main>
 
 

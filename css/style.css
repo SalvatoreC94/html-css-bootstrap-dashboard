@@ -1,8 +1,24 @@
 :root {
     --header-height: 60px;
-    --aside-width: 150px
+    --aside-width: 150px;
 }
 
+.bg-light-gray {
+    background-color: #E5E5E5;
+
+}
+
+.bg-medium-blue {
+    background-color: #165BBA;
+}
+
+.bg-blue {
+    background-color: #1B72E8;
+}
+
+.bg-gray {
+    background-color: #F8F9FA;
+}
 
 #main-header {
     height: var(--header-height)
@@ -14,8 +30,23 @@ main {
 
 main>aside {
     width: var(--aside-width);
+
 }
+
+
 
 main>section {
     width: calc(100% - var(--aside-width));
+}
+
+.avatar-table {
+    max-width: 25px;
+
+}
+
+
+
+.logo-mobile {
+    width: 35px;
+    aspect-ratio: 1;
 }
